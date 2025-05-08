@@ -1,0 +1,6 @@
+framework module AdMasterSDK {
+  umbrella header "AdMasterSDK.h"
+  export *
+
+  module * { export * }
+}
