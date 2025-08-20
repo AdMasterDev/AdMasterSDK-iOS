@@ -17,7 +17,7 @@
 /**
  *  应用的APPID
  */
-@property(nonatomic, copy) NSString *publisherId;
+@property(nonatomic, copy, readonly) NSString *publisherId;
 
 /**
  *  设置/获取代码位(广告位)id
@@ -59,11 +59,6 @@
  * 广告请求超时时间，默认30s，单位s
  */
 @property (nonatomic, assign) NSTimeInterval timeout;
-
-/**
- * 广告类型，请在request请求之前赋值
- */
-@property (nonatomic, assign) ADMAdType adType;
 
 /**
  * 设置底价过滤，支持客户端与服务端bidding配置

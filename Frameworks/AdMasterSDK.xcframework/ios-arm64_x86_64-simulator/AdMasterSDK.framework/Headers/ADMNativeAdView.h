@@ -144,22 +144,10 @@
 - (void)loadAndDisplayNativeAdWithObject:(ADMNativeAdObject *)object completion:(ADMViewCompletionBlock)completionBlock;
 
 /**
- 曝光事件，必传
- */
-- (void)trackImpression;
-
-/**
  手动触发视频播放 仅在WiFi自动播放场景下生效
 
  @return 视频播放状态，是否播放中 YES正常播放  NO未播放
  */
 - (BOOL)render;
-
-/**
- 设置信息流点击响应事件
-
- @param deal YES需开发者手动添加点击事件  默认NO，SDK管理点击事件
- */
-+ (void)dealTapGesture:(BOOL) deal;
 
 @end

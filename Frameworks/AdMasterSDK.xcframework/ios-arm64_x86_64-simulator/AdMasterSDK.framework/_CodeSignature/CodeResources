@@ -8,9 +8,17 @@
 		<data>
 		eGMsl/7yLeDCUj0KMuMckUhM1KI=
 		</data>
+		<key>Headers/ADMBannerDelegate.h</key>
+		<data>
+		U23TzMVeTN3UbmiI6QudYGd2C3s=
+		</data>
+		<key>Headers/ADMBannerView.h</key>
+		<data>
+		dYs9VLA0bxr2uzy0UsYJdhXpNO8=
+		</data>
 		<key>Headers/ADMCommonConfig.h</key>
 		<data>
-		0XKt6GTQWDzKuRwtbcQqVIO9RfU=
+		1Sx0fW3T7okAoJV0VRC0MECMomI=
 		</data>
 		<key>Headers/ADMExpressIntDelegate.h</key>
 		<data>
@@ -18,15 +26,15 @@
 		</data>
 		<key>Headers/ADMExpressInterstitial.h</key>
 		<data>
-		IhhOoUD602iYqCis/9li4CtXuHs=
+		lpV0hvPi2isc5Mu5b6rJe02D1EM=
 		</data>
 		<key>Headers/ADMManager.h</key>
 		<data>
-		YyZH0Qx/YPUAwaoJgLm2dUrMQng=
+		ZuhRc9Hq0Ly7f0iGTKrxlKgGj3Q=
 		</data>
 		<key>Headers/ADMNative.h</key>
 		<data>
-		B5WXvEzM45mICtK/lx/jGH8FRg0=
+		OeSvGieJvmTXup+D64HMcnMJNX0=
 		</data>
 		<key>Headers/ADMNativeAdDelegate.h</key>
 		<data>
@@ -34,11 +42,11 @@
 		</data>
 		<key>Headers/ADMNativeAdObject.h</key>
 		<data>
-		GnQVOJ9xNmAqYMZnDstkSbiv5uA=
+		LSmUXDdpr82L9kLKbGoEEmdYI4Y=
 		</data>
 		<key>Headers/ADMNativeAdView.h</key>
 		<data>
-		aT14ESl9I70ISCsNukQ98GkX+hc=
+		WTz0s5MumzzMBXHtRblRiq8MRlo=
 		</data>
 		<key>Headers/ADMNativeInterationDelegate.h</key>
 		<data>
@@ -62,7 +70,7 @@
 		</data>
 		<key>Headers/ADMRewardVideo.h</key>
 		<data>
-		lsCU4pE69WgkCOrPLG3rYl8652w=
+		/qngF86Wfj1F+hsUWWbRtvRY+xk=
 		</data>
 		<key>Headers/ADMRewardVideoDelegate.h</key>
 		<data>
@@ -74,7 +82,7 @@
 		</data>
 		<key>Headers/ADMSplash.h</key>
 		<data>
-		MHCowfMofB9lM7hsFrqPHQJF9k8=
+		sOK5wG4r1vmODb9KEmaJvVaqMCI=
 		</data>
 		<key>Headers/ADMSplashDelegate.h</key>
 		<data>
@@ -86,11 +94,11 @@
 		</data>
 		<key>Headers/AdMasterSDK.h</key>
 		<data>
-		cBuNAHOpi3ogOkNF+CZfgwyouIY=
+		6OD+NDpNUsYqi6QKMblrUqqc/DM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vI5ahMtIRJiCQUifTLrNsvzYi7U=
+		gRltVA/XcYIOrOcB2+OAlDOps4I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,7 +110,7 @@
 		</data>
 		<key>README.md</key>
 		<data>
-		77gX5TU/Of/aRAb+wo8FvePuN2g=
+		8KZ526jVhBNI+pPiNUd4uqZUNmo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -118,15 +126,37 @@
 			2ZU8cQIqikHQ7+nl3WG0DlCA2I7zX5590UV4p/Pdyqc=
 			</data>
 		</dict>
+		<key>Headers/ADMBannerDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			U23TzMVeTN3UbmiI6QudYGd2C3s=
+			</data>
+			<key>hash2</key>
+			<data>
+			ziJHIxyudxn8M2cZCokyymnC2w82i/pOPSzT7Y4UJGo=
+			</data>
+		</dict>
+		<key>Headers/ADMBannerView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dYs9VLA0bxr2uzy0UsYJdhXpNO8=
+			</data>
+			<key>hash2</key>
+			<data>
+			m5kaUjxO/3DVOZVj+GvOPba5y+hozbf/9TzvvBhKbek=
+			</data>
+		</dict>
 		<key>Headers/ADMCommonConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0XKt6GTQWDzKuRwtbcQqVIO9RfU=
+			1Sx0fW3T7okAoJV0VRC0MECMomI=
 			</data>
 			<key>hash2</key>
 			<data>
-			84UA6qKoBcL3netjQbLvU1Q33PZ7D4u0i9NA92YTX1s=
+			Rp6zlqZ1EfvCObvWrMy5LF1qmySguo3yDDXwaVhoWEU=
 			</data>
 		</dict>
 		<key>Headers/ADMExpressIntDelegate.h</key>
@@ -144,33 +174,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IhhOoUD602iYqCis/9li4CtXuHs=
+			lpV0hvPi2isc5Mu5b6rJe02D1EM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Atu0RrDJQFKYUtws/DIe4i8ja+rhaHjxP2SsSh2/ny8=
+			liEDnW51pOcyVF+Xf4hmIooa+LvcHbQi/hEeoycg+/s=
 			</data>
 		</dict>
 		<key>Headers/ADMManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YyZH0Qx/YPUAwaoJgLm2dUrMQng=
+			ZuhRc9Hq0Ly7f0iGTKrxlKgGj3Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			lPISdjufRIDOc1aQMk5PJUFZtPszB7LbIb7wG1U380Y=
+			crSo1f16zvZJY4kTjann23heSGnR0wivRJj2fIn2JVo=
 			</data>
 		</dict>
 		<key>Headers/ADMNative.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			B5WXvEzM45mICtK/lx/jGH8FRg0=
+			OeSvGieJvmTXup+D64HMcnMJNX0=
 			</data>
 			<key>hash2</key>
 			<data>
-			//K2dHcpN8hFBhIJeKveLuk+/qxMXUFsVmBuesnqa1M=
+			JyRZpMn8VGzvLKwp8nv0OzmcuGEloFnLQIS0DBcM4eE=
 			</data>
 		</dict>
 		<key>Headers/ADMNativeAdDelegate.h</key>
@@ -188,22 +218,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GnQVOJ9xNmAqYMZnDstkSbiv5uA=
+			LSmUXDdpr82L9kLKbGoEEmdYI4Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			udOHikgDmfaesdbHbkSBCeIOrdGbJp2mvOma7iaGSH0=
+			k34xyC+vYvUH5UBCIT2LD8qdYXOAr73sK88jQHbs/lg=
 			</data>
 		</dict>
 		<key>Headers/ADMNativeAdView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aT14ESl9I70ISCsNukQ98GkX+hc=
+			WTz0s5MumzzMBXHtRblRiq8MRlo=
 			</data>
 			<key>hash2</key>
 			<data>
-			+1JddGY5G2w4RWSpiJF2n1lkKp6rYhMW+58uy37jgx0=
+			Lxv0BUfbztLRS1bPja22o6MadRj0ZV+x4MZq6KZ4VCI=
 			</data>
 		</dict>
 		<key>Headers/ADMNativeInterationDelegate.h</key>
@@ -265,11 +295,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lsCU4pE69WgkCOrPLG3rYl8652w=
+			/qngF86Wfj1F+hsUWWbRtvRY+xk=
 			</data>
 			<key>hash2</key>
 			<data>
-			UjoA1kVf2SDV8UoqYqVjWjTD0yOoMkCs+jIxaz3g9Gc=
+			lbVBzmmfp6JDn+TnT9tsV87eJzDiOfpFyjKtaDH0EbI=
 			</data>
 		</dict>
 		<key>Headers/ADMRewardVideoDelegate.h</key>
@@ -298,11 +328,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MHCowfMofB9lM7hsFrqPHQJF9k8=
+			sOK5wG4r1vmODb9KEmaJvVaqMCI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DKrUjXBqynKudgF/LyXEbTbJjmHSZL+TzPeM62u7DOo=
+			WC2t2MuRxd6aWfc0bAqhcfK64E3jHpEqxFUROveidAc=
 			</data>
 		</dict>
 		<key>Headers/ADMSplashDelegate.h</key>
@@ -331,11 +361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cBuNAHOpi3ogOkNF+CZfgwyouIY=
+			6OD+NDpNUsYqi6QKMblrUqqc/DM=
 			</data>
 			<key>hash2</key>
 			<data>
-			gTCzXl5g6JrfQ0LAXBgIyBr5wjgMf9nlUZylMY6W3rY=
+			IyuaOc091xrSbrWPTOsaidY807YvltumwtMYaBvI6EE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -364,11 +394,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			77gX5TU/Of/aRAb+wo8FvePuN2g=
+			8KZ526jVhBNI+pPiNUd4uqZUNmo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bzgv5OA3wGmE4VKACU190xIzFnc9VzzzIWPLTWF+DjA=
+			1fO3xqcxzkxIZ5PrCvyUE33ka4N1tmel1mWNlt9AEAo=
 			</data>
 		</dict>
 	</dict>

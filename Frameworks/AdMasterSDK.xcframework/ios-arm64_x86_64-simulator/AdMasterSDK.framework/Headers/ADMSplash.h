@@ -41,7 +41,7 @@
 /**
  *  应用的APPID
  */
-@property(nonatomic, copy) NSString *publisherId;
+@property(nonatomic, copy, readonly) NSString *publisherId;
 
 /**
  *  设置/获取代码位id
@@ -52,11 +52,6 @@
  *  设置开屏广告是否可以点击的属性,开屏默认可以点击。
  */
 @property (nonatomic, assign) BOOL canSplashClick;
-
-/**
- *  SDK版本
- */
-@property (nonatomic, readonly) NSString *version;
 
 /**
  * 广告请求超时时间，默认3s，单位s

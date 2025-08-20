@@ -8,18 +8,8 @@
 #import <UIKit/UIKit.h>
 #ifndef ADM_CommonConfig_h
 #define ADM_CommonConfig_h
-// SDK版本号
-#define SDK_VERSION_IN_MSSP @"1.0.0"
 
 typedef void (^ADMViewCompletionBlock)(NSArray *errors);
-
-typedef enum {
-    ADMAdTypeFeed = 0, // 默认 请求普通信息流广告
-    ADMAdTypePortrait = 1,  // 竖版视频广告
-    ADMAdTypeRewardVideo = 2,  // 激励视频
-    ADMAdTypeExpressInterstitial = 4,   // 模板插屏
-    ADMAdTypeSplash = 6 // 开屏
-} ADMAdType;
 
 typedef enum {
     NORMAL, // 一般图文或图片广告
@@ -33,6 +23,30 @@ typedef enum {
     ADMNativeAdActionTypeDL = 2,   // 下载类广告
     ADMNativeAdActionTypeDeepLink = 512    // 唤醒类广告
 } ADMNativeAdActionType;
+
+typedef enum {
+    onShow,             // Video展现
+    onClickToPlay,      // 点击播放
+    onStart,            // 开始播放
+    onError,            // 播放失败
+    onComplete,         // 完整播放
+    onClose,            // 播放结束
+    onFullScreen,       // 全屏观看
+    onClick,            // 广告点击
+    onSkip,             // 跳过视频
+    onShowEndCard,      // 展现endcard
+    onClickEndCard,     // 点击endcard
+    onClickDownloadDirect,  // 视频下载广告点击直接下载
+    onCacheSuccess,     // 视频缓存成功
+    onCacheFail,        // 视频缓存失败
+    onCacheExpire,      // 广告过期
+    onReplay,           // 重播
+    onPlayEnd,          // 播放终止，横、竖版视频
+    onMute,             // 静音按钮点击
+    onReady,            // 准备播放
+    onPlay,             // 调用播放
+    onFrozen            // 播放器卡顿
+} ADMNativeVideoEvent;
 
 /**
  *  性别类型

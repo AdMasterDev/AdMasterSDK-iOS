@@ -20,7 +20,7 @@
 /**
  *  应用的APPID
  */
-@property (nonatomic, copy) NSString *publisherId;
+@property (nonatomic, copy, readonly) NSString *publisherId;
 
 /**
  *  设置/获取代码位(广告位)id

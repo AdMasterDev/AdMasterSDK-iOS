@@ -11,11 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ADMManager : NSObject
 
-/// 初始化SDK
-/// - Parameter completionHandler: 初始化回调
-+ (void)startWithCompletionHandler:(void(^)(BOOL success, NSError * _Nullable error))completionHandler;
-
-+ (void)setAppsid:(NSString *)appsid;
+/// 初始化函数，SDK可在此函数做些预初始化
++ (void)startWithAppsid:(NSString *)appsid completionHandler:(void (^)(BOOL, NSError * _Nullable))completionHandler;
 
 + (NSString *)getSDKVersion;
 

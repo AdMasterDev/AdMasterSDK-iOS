@@ -34,4 +34,6 @@ FOUNDATION_EXPORT const unsigned char AdMasterSDKVersionString[];
 #import <AdMasterSDK/ADMSplash.h>
 #import <AdMasterSDK/ADMSplashDelegate.h>
 #import <AdMasterSDK/ADMVideoView.h>
+#import <AdMasterSDK/ADMBannerView.h>
+#import <AdMasterSDK/ADMBannerDelegate.h>
 #import <AdMasterSDK/ADMManager.h>

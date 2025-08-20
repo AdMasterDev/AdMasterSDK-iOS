@@ -38,16 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *mainImageURLString;
 
 /**
- * 广告标识图标 url
- */
-@property (copy, nonatomic) NSString *adLogoURLString;
-
-/**
- * logo图标 url
- */
-@property (copy, nonatomic) NSString *admLogoURLString;
-
-/**
  * 多图信息流的image url array
  */
 @property (strong, nonatomic) NSArray *morepics;
@@ -80,11 +70,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 大图图片宽
  */
-@property (copy, nonatomic) NSString *w;
+@property (assign, nonatomic) float w;
 /**
  * 大图图片高
  */
-@property (copy, nonatomic) NSString *h;
+@property (assign, nonatomic) float h;
+
+/**
+ * 大图宽高比
+ */
+@property (assign, nonatomic) float aspectRatio;
+
 /**
  价格标签
  */
@@ -139,16 +135,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 是否过期，默认为false，2h后过期，需要重新请求广告
  */
 - (BOOL)isExpired;
-
-/**
- * 发送展现
- */
-- (void)trackImpression:(UIView *)view;
-
-/**
- * 发送点击
- */
-- (void)handleClick:(UIView *)view;
 
 /**
  * 官网logo点击
