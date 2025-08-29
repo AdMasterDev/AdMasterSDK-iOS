@@ -148,7 +148,23 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)getAdDataForKey:(NSString *)key;
 
-@end
 
+/**
+ * 注册视图用于交互事件
+ * @param containerView 容器视图
+ * @param mediaView 视频/图片视图
+ * @param clickableViews 可点击视图
+ * @param viewController 视图控制器
+ */
+ - (void)registerViewForInteraction:(UIView *)containerView
+                          mediaView:(UIView *)mediaView
+                     clickableViews:(NSArray<UIView *> *)clickableViews
+                     viewController:(UIViewController *)viewController;
+/**
+ * 注销视图交互事件
+ * @param view 容器视图
+ */
+- (void)unregisterView:(UIView *)view;
+@end
 
 NS_ASSUME_NONNULL_END

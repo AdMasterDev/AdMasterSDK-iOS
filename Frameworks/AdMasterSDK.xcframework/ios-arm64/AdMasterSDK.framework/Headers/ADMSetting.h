@@ -8,6 +8,12 @@
 
 @interface ADMSetting : NSObject
 
+/**
+ * 是否测试模式，默认关闭
+ * ⚠️仅测试使用，Release版本请确保不调用，否则将无法计费
+ */
+@property (nonatomic, assign) BOOL isTest;
+
 @property (nonatomic, assign) BOOL trackCrash;
 
 + (ADMSetting *)sharedInstance;
@@ -40,6 +46,10 @@
  */
 - (NSString *)getSDKVersion;
 
+/**
+ * 从UserDefault读取CMP写入的GDPR同意相关信息
+ */
+- (NSDictionary *)getGDPRInformation;
 
 @end
 
