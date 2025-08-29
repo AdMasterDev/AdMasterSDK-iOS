@@ -20,13 +20,14 @@
     ADMNative *_nativeAd;
     ADMNativeAdObject *_nativeAdObject;
     ADMNativeVideoView *_nativeVideoView;
+    
+    NSArray<GADNativeAdImage *> *_images;
+    GADNativeAdImage *_icon;
+    UIView *_adChoicesView;
 }
 @end
 
 @implementation ADMCustomEventNativeAd
-NSArray<GADNativeAdImage *> *_images;
-GADNativeAdImage *_icon;
-UIView *_adChoicesView;
 
 #pragma mark GADMediatedUnifiedNativeAd implementation
 
@@ -168,6 +169,7 @@ UIView *_adChoicesView;
     __block GADNativeAdImage *loadedImage = nil;
     
     dispatch_group_enter(group);
+    __weak typeof(self) weakSelf = self;
     [self loadImageFromURL:_nativeAdObject.iconImageURLString completion:^(GADNativeAdImage * _Nullable image) {
         loadedIcon = image;
         dispatch_group_leave(group);
@@ -175,21 +177,24 @@ UIView *_adChoicesView;
     
     if (_nativeAdObject.materialType != VIDEO) {
         dispatch_group_enter(group);
-        [self loadImageFromURL:_nativeAdObject.mainImageURLString completion:^(GADNativeAdImage * _Nullable image) {
+        [weakSelf loadImageFromURL:_nativeAdObject.mainImageURLString completion:^(GADNativeAdImage * _Nullable image) {
             loadedImage = image;
             dispatch_group_leave(group);
         }];
     }
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        _icon = loadedIcon;
-        _images = (loadedImage == nil) ? @[] : @[loadedImage];
-        _nativeVideoView = nil;
-        if (_nativeAdObject.materialType == VIDEO) {
-            _nativeVideoView = [[ADMNativeVideoView alloc] initWithFrame:CGRectZero andObject:_nativeAdObject];
-            _nativeVideoView.videoDelegate = self;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) return;
+        
+        strongSelf->_icon = loadedIcon;
+        strongSelf->_images = (loadedImage == nil) ? @[] : @[loadedImage];
+        strongSelf->_nativeVideoView = nil;
+        if (strongSelf->_nativeAdObject.materialType == VIDEO) {
+            strongSelf->_nativeVideoView = [[ADMNativeVideoView alloc] initWithFrame:CGRectZero andObject:strongSelf->_nativeAdObject];
+            strongSelf->_nativeVideoView.videoDelegate = strongSelf;
         }
-        _adEventDelegate = _loadCompletionHandler(self, nil);
+        strongSelf->_adEventDelegate = strongSelf->_loadCompletionHandler(strongSelf, nil);
     });
 }
 
