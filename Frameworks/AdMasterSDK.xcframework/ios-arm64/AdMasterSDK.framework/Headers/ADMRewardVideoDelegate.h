@@ -6,6 +6,8 @@
 //  Copyright © 2018年 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMRewardVideoDelegate_h
+#define ADMRewardVideoDelegate_h
 
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
@@ -98,5 +100,7 @@
  *  视频播放失败
  */
 - (void)rewardedVideoAdPlayFailed:(ADMRewardVideo *)video withError:(NSString *)error;
+
 @end
 
+#endif /* ADMRewardVideoDelegate_h */

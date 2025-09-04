@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 lishan04. All rights reserved.
 //
 
+#ifndef ADMNativeAdObject_h
+#define ADMNativeAdObject_h
+
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 
@@ -18,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 广告交互 delegate
  */
-@property (nonatomic, weak) id <ADMNativeInterationDelegate> interationDelegate;
+@property (nonatomic, weak) id<ADMNativeInterationDelegate> interationDelegate;
 
 /**
  * 标题 text
@@ -120,7 +123,8 @@ NS_ASSUME_NONNULL_BEGIN
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
+                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
@@ -129,7 +133,8 @@ NS_ASSUME_NONNULL_BEGIN
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
+                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 是否过期，默认为false，2h后过期，需要重新请求广告
@@ -147,7 +152,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @return 字段的字符串
  */
 - (NSString *)getAdDataForKey:(NSString *)key;
-
 
 /**
  * 注册视图用于交互事件
@@ -168,3 +172,5 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMNativeAdObject_h */

@@ -5,6 +5,9 @@
 //  Created by AdMasterDev on 2025/6/24.
 //
 
+#ifndef ADMBannerView_h
+#define ADMBannerView_h
+
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMBannerDelegate.h>
 
@@ -56,3 +59,5 @@ NS_SWIFT_NAME(BannerView)
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMBannerView_h */

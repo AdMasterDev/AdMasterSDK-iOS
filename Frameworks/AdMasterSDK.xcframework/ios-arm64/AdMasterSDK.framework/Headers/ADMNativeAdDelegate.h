@@ -5,6 +5,10 @@
 //  Created by deng jinxiang on 13-8-1.
 //
 //
+
+#ifndef ADMNativeAdDelegate_h
+#define ADMNativeAdDelegate_h
+
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 
@@ -73,3 +77,5 @@
 - (void)nativeVideoAdCacheFail:(ADMNative *)nativeAd withError:(ADMFailReason)reason;
 
 @end
+
+#endif /* ADMNativeAdDelegate_h */

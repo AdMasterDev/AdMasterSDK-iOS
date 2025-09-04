@@ -6,6 +6,9 @@
 //  Copyright © 2016年 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMSplashDelegate_h
+#define ADMSplashDelegate_h
+
 #import <AdMasterSDK/ADMCommonConfig.h>
 #import <Foundation/Foundation.h>
 
@@ -99,7 +102,6 @@
  */
 - (void)splashAdCacheFail:(ADMSplash *)splash;
 
-
 @end
 
 @protocol ADMSplashCardViewDelegate <NSObject>
@@ -122,3 +124,4 @@
 
 @end
 
+#endif /* ADMSplashDelegate_h */

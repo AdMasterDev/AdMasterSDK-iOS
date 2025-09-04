@@ -6,16 +6,18 @@
 //  Copyright © 2018年 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMRewardVideo_h
+#define ADMRewardVideo_h
+
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMRewardVideoDelegate.h>
-
 
 @interface ADMRewardVideo : NSObject
 
 /**
  *  委托对象
  */
-@property (nonatomic, weak) id <ADMRewardVideoDelegate> delegate;
+@property (nonatomic, weak) id<ADMRewardVideoDelegate> delegate;
 
 /**
  *  应用的APPID
@@ -97,7 +99,8 @@
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
+                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
@@ -106,7 +109,8 @@
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
+                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 
 /**
@@ -132,5 +136,6 @@
 
 - (void)setBiddingData:(NSString *)data ADM_DEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
 
-
 @end
+
+#endif /* ADMRewardVideo_h */

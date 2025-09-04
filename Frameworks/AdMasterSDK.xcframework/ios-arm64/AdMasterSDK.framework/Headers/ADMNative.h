@@ -6,6 +6,9 @@
 //
 //
 
+#ifndef ADMNative_h
+#define ADMNative_h
+
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMNativeAdDelegate.h>
 #import <AdMasterSDK/ADMNativeInterationDelegate.h>
@@ -94,5 +97,6 @@
 
 - (void)setBiddingData:(NSString *)data ADM_DEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
 
-
 @end
+
+#endif /* ADMNative_h */

@@ -5,6 +5,9 @@
 //  Created by AdMasterDev on 2025/6/24.
 //
 
+#ifndef ADMBannerDelegate_h
+#define ADMBannerDelegate_h
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -49,3 +52,5 @@ NS_SWIFT_NAME(BannerDelegate)
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMBannerDelegate_h */

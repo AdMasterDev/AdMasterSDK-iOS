@@ -5,6 +5,9 @@
 //  Created by AdMasterDev on 2025/8/25.
 //
 
+#ifndef ADMCustomEvent_h
+#define ADMCustomEvent_h
+
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
@@ -21,3 +24,5 @@ typedef NS_ENUM(NSInteger, ADMCustomEventErrorCode) {
 @interface ADMCustomEvent : NSObject <GADMediationAdapter>
 
 @end
+
+#endif /* ADMCustomEvent_h */

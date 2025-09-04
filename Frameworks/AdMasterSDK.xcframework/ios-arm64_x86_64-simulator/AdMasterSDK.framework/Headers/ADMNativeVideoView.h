@@ -4,6 +4,9 @@
 //  Copyright (c) 2015 lishan04. All rights reserved.
 //
 
+#ifndef ADMNativeVideoView_h
+#define ADMNativeVideoView_h
+
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
@@ -14,7 +17,7 @@
 @property BOOL supportControllerView;
 @property BOOL supportActImage;
 
-@property (nonatomic, weak) id <ADMNativeVideoViewDelegate> videoDelegate; //视频事件delegate
+@property (nonatomic, weak) id<ADMNativeVideoViewDelegate> videoDelegate; //视频事件delegate
 
 /**
  初始化方法
@@ -82,3 +85,5 @@
 - (BOOL)render;
 
 @end
+
+#endif /* ADMNativeVideoView_h */

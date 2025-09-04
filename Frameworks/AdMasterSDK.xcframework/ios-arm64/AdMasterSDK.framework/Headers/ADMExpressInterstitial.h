@@ -6,6 +6,9 @@
 //  Copyright © 2021 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMExpressInterstitial_h
+#define ADMExpressInterstitial_h
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMExpressIntDelegate.h>
@@ -18,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  委托对象
  */
-@property (nonatomic, weak) id <ADMExpressIntDelegate> delegate;
+@property (nonatomic, weak) id<ADMExpressIntDelegate> delegate;
 
 /**
  *  应用的APPID
@@ -81,7 +84,8 @@ NS_ASSUME_NONNULL_BEGIN
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
+                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
@@ -90,7 +94,8 @@ NS_ASSUME_NONNULL_BEGIN
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
+                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 - (NSString *)getPECPM;
 
@@ -117,7 +122,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setBiddingData:(NSString *)data ADM_DEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
 
-
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMExpressInterstitial_h */

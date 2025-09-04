@@ -6,6 +6,9 @@
 //  Copyright © 2018 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMVideoView_h
+#define ADMVideoView_h
+
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 #import <AVFoundation/AVFoundation.h>
@@ -60,7 +63,7 @@
 
 @interface ADMVideoView : UIView
 
-@property (nonatomic, weak) id <ADMVideoViewDelegate> delegate;
+@property (nonatomic, weak) id<ADMVideoViewDelegate> delegate;
 
 /**
  * 广告素材type
@@ -145,3 +148,5 @@
 
 
 @end
+
+#endif /* ADMVideoView_h */

@@ -6,6 +6,9 @@
 //  Copyright © 2016年 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMSplash_h
+#define ADMSplash_h
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMSplashDelegate.h>
@@ -14,17 +17,17 @@
 /**
  *  委托对象
  */
-@property (nonatomic, weak) id <ADMSplashDelegate> delegate;
+@property (nonatomic, weak) id<ADMSplashDelegate> delegate;
 
 /**
  * 开屏点睛-卡片样式delegate
  */
-@property (nonatomic, weak) id <ADMSplashCardViewDelegate> cardDelegate;
+@property (nonatomic, weak) id<ADMSplashCardViewDelegate> cardDelegate;
 
 /**
  * 开屏点睛-icon样式delegate
  */
-@property (nonatomic, weak) id <ADMSplashFocusZoomOutViewDelegate> zoomOutDelegate;
+@property (nonatomic, weak) id<ADMSplashFocusZoomOutViewDelegate> zoomOutDelegate;
 
 /**
  * 是否支持开屏点睛-卡片样式
@@ -125,7 +128,8 @@
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
+                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
@@ -134,7 +138,8 @@
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
  * @param completion 发送成功或失败回调
  */
-- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
+                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 获取Bidding token
@@ -156,3 +161,5 @@
 - (NSString *)getAdDataForKey:(NSString *)key;
 
 @end
+
+#endif /* ADMSplash_h */

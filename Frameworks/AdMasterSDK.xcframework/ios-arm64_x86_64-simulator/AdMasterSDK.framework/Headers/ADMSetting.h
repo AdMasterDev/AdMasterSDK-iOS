@@ -3,6 +3,9 @@
 //
 //
 //
+#ifndef ADMSetting_h
+#define ADMSetting_h
+
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 
@@ -53,3 +56,4 @@
 
 @end
 
+#endif /* ADMSetting_h */

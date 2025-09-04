@@ -6,6 +6,9 @@
 //  Copyright © 2016年 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMRenderEventDelegate_h
+#define ADMRenderEventDelegate_h
+
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 @class ADMAdRenderer;
@@ -69,5 +72,6 @@
                      reason:(ADMFailReason)reason
                  dictionary:(NSDictionary *)dict;
 
-
 @end
+
+#endif /* ADMRenderEventDelegate_h */

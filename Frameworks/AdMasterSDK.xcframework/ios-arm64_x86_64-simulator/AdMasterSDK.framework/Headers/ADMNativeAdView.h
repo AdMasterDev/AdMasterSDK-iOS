@@ -6,6 +6,9 @@
 //
 //
 
+#ifndef ADMNativeAdView_h
+#define ADMNativeAdView_h
+
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
 @class ADMNativeVideoView;
@@ -151,3 +154,5 @@
 - (BOOL)render;
 
 @end
+
+#endif /* ADMNativeAdView_h */

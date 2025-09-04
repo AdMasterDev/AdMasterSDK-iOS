@@ -9,9 +9,6 @@
 #ifndef ADMNativeInterationDelegate_h
 #define ADMNativeInterationDelegate_h
 
-
-#endif /* ADMNativeInterationDelegate_h */
-
 @class ADMNative;
 @class ADMNativeAdObject;
 @class ADMExpressNativeView;
@@ -89,3 +86,5 @@
                             nativeAd:(ADMNative *)nativeAd;
 
 @end
+
+#endif /* ADMNativeInterationDelegate_h */

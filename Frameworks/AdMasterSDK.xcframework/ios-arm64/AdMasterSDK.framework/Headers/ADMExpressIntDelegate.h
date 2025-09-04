@@ -5,6 +5,8 @@
 //  Created by yangdingjia on 2021/9/18.
 //  Copyright © 2021 AdMaster Inc. All rights reserved.
 //
+#ifndef ADMExpressIntDelegate_h
+#define ADMExpressIntDelegate_h
 
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
@@ -85,3 +87,4 @@
 - (void)interstitialAdVideoPlayFailed:(ADMExpressInterstitial *)interstitial WithError:(NSString *)error;
 @end
 
+#endif /* ADMExpressIntDelegate_h */

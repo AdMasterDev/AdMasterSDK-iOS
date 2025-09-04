@@ -5,6 +5,9 @@
 //  Created by yangdingjia on 2024/6/24.
 //
 
+#ifndef ADMManager_h
+#define ADMManager_h
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,3 +22,5 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMManager_h */

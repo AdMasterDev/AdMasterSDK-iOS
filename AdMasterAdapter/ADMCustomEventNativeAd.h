@@ -5,6 +5,9 @@
 //  Created by AdMasterDev on 2025/8/25.
 //
 
+#ifndef ADMCustomEventNativeAd_h
+#define ADMCustomEventNativeAd_h
+
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
@@ -14,3 +17,5 @@
                      completionHandler:(GADMediationNativeLoadCompletionHandler)completionHandler;
 
 @end
+
+#endif /* ADMCustomEventNativeAd_h */

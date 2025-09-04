@@ -6,6 +6,9 @@
 //  Copyright © 2021 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMAdActButton_h
+#define ADMAdActButton_h
+
 #import <UIKit/UIKit.h>
 @class ADMNativeAdObject;
 
@@ -17,3 +20,5 @@
 - (void)setData:(ADMNativeAdObject *)object;
 
 @end
+
+#endif /* ADMAdActButton_h */

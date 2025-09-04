@@ -5,6 +5,9 @@
 //  Created by sunmingzhe01 on 2024/4/24.
 //
 
+#ifndef AdMasterSDK_h
+#define AdMasterSDK_h
+
 #import <Foundation/Foundation.h>
 
 //! Project version number for AdMasterSDK.
@@ -37,3 +40,5 @@ FOUNDATION_EXPORT const unsigned char AdMasterSDKVersionString[];
 #import <AdMasterSDK/ADMBannerView.h>
 #import <AdMasterSDK/ADMBannerDelegate.h>
 #import <AdMasterSDK/ADMManager.h>
+
+#endif /* AdMasterSDK_h */

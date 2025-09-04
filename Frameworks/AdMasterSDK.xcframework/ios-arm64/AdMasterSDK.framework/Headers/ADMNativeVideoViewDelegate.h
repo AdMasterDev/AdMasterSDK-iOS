@@ -6,6 +6,9 @@
 //  Copyright © 2020 AdMaster Inc. All rights reserved.
 //
 
+#ifndef ADMNativeVideoViewDelegate_h
+#define ADMNativeVideoViewDelegate_h
+
 @class ADMNativeVideoView;
 @protocol ADMNativeVideoViewDelegate <NSObject>
 
@@ -54,3 +57,5 @@
 - (void)nativeVideoAdDidReadyForDisplay:(ADMNativeVideoView *)videoView;
 
 @end
+
+#endif /* ADMNativeVideoViewDelegate_h */

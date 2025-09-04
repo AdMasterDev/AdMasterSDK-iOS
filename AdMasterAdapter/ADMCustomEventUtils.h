@@ -5,6 +5,9 @@
 //  Created by AdMasterDev on 2025/8/25.
 //
 
+#ifndef ADMCustomEventUtils_h
+#define ADMCustomEventUtils_h
+
 #import <Foundation/Foundation.h>
 #import "ADMCustomEventConstants.h"
 #import "ADMCustomEvent.h"
@@ -24,3 +27,5 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* ADMCustomEventUtils_h */
