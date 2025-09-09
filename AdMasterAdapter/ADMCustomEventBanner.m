@@ -71,7 +71,7 @@
 
 - (void)bannerView:(ADMBannerView *)bannerView didFailToDisplayAdWithError:(NSError *)error {
     NSError *adError = [ADMCustomEventUtils errorWithCode:ADMCustomEventErrorAdPresentFailed description:error.localizedDescription];
-    _adEventDelegate = _loadCompletionHandler(nil, adError);
+    [_adEventDelegate didFailToPresentWithError:adError];
 }
 
 - (void)bannerViewDidImpression:(ADMBannerView *)bannerView {

@@ -85,7 +85,7 @@
 - (void)interstitialAdExposureFail:(ADMExpressInterstitial *)interstitial withError:(int)reason {
     NSError *err = [ADMCustomEventUtils errorWithCode:ADMCustomEventErrorAdPresentFailed
                                           description:[NSString stringWithFormat:@"The interstitial ad failed to present with error code: %d", reason]];
-    _adEventDelegate = _loadCompletionHandler(nil, err);
+    [_adEventDelegate didFailToPresentWithError:err];
 }
 
 - (void)interstitialAdDidClose:(ADMExpressInterstitial *)interstitial {
