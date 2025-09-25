@@ -69,16 +69,13 @@
     
     [ADMManager startWithAppsid:appID completionHandler:^(BOOL success, NSError * _Nullable error) {
         if (success) {
+            BOOL isTestMode = [ADMCustomEventUtils isTestFromAdConfigurationParameter: parameter];
+            [ADMSetting sharedInstance].isTest = isTestMode;
             completionHandler(nil);
         } else {
             completionHandler(error);
         }
     }];
-    
-    BOOL isTestMode = [ADMCustomEventUtils isTestFromAdConfigurationParameter: parameter];
-    if (isTestMode) {
-        [ADMSetting sharedInstance].isTest = YES;
-    }
 }
 
 - (void)loadBannerForAdConfiguration:(GADMediationBannerAdConfiguration *)adConfiguration
