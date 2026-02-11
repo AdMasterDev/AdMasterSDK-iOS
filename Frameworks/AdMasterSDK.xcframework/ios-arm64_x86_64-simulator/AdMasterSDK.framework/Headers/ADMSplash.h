@@ -90,8 +90,10 @@
 
 /**
  * 展示广告
+ * @param view 广告容器视图
+ * @param viewController 用于 present 落地页的 VC，传 nil 则使用 load 前设置的 presentAdViewController
 */
-- (void)showInContainerView:(UIView *)view;
+- (void)showInContainerView:(UIView *)view presentViewController:(nullable UIViewController *)viewController;
 
 /**
  * 销毁开屏，释放资源
