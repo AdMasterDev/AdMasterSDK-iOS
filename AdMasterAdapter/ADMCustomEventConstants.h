@@ -12,7 +12,7 @@
 static NSString *const ADMCustomEventErrorDomain = @"com.admaster.ADMCustomEvent";
 
 /// Version for the AdMaster Custom Event Adapter
-static NSString *const ADMCustomEventAdapterVersion = @"1.0.7.0";
+static NSString *const ADMCustomEventAdapterVersion = @"1.0.8.0";
 
 /// key for appID
 static NSString *const ADMCustomEventAppID = @"app_id";

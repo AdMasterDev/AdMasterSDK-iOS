@@ -12,22 +12,25 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AdMasterSDK/ADMSplashDelegate.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ADMSplash : NSObject
 
 /**
  *  委托对象
  */
-@property (nonatomic, weak) id<ADMSplashDelegate> delegate;
+@property (nonatomic, weak, nullable) id<ADMSplashDelegate> delegate;
 
 /**
  * 开屏点睛-卡片样式delegate
  */
-@property (nonatomic, weak) id<ADMSplashCardViewDelegate> cardDelegate;
+@property (nonatomic, weak, nullable) id<ADMSplashCardViewDelegate> cardDelegate;
 
 /**
  * 开屏点睛-icon样式delegate
  */
-@property (nonatomic, weak) id<ADMSplashFocusZoomOutViewDelegate> zoomOutDelegate;
+@property (nonatomic, weak, nullable) id<ADMSplashFocusZoomOutViewDelegate> zoomOutDelegate;
 
 /**
  * 是否支持开屏点睛-卡片样式
@@ -69,7 +72,7 @@
 /**
  *  使用controller present 落地页
  */
-@property (nonatomic, weak) UIViewController *presentAdViewController;
+@property (nonatomic, weak, nullable) UIViewController *presentAdViewController;
 
 /**
  * 设置底价过滤，支持客户端与服务端bidding配置
@@ -92,7 +95,7 @@
  * 展示广告
  * @param view 广告容器视图
  * @param viewController 用于 present 落地页的 VC，传 nil 则使用 load 前设置的 presentAdViewController
-*/
+ */
 - (void)showInContainerView:(UIView *)view presentViewController:(nullable UIViewController *)viewController;
 
 /**
@@ -108,20 +111,20 @@
 
 /**
  * 重置广告容器大小
-*/
+ */
 - (void)resizeLayout;
 
 /**
  * 开屏广告自定义相关配置字段
  */
-- (NSString *)getExtData;
+- (nullable NSString *)getExtData;
 
 /**
  *  广告价格标签
  */
-- (NSString *)getECPMLevel;
+- (nullable NSString *)getECPMLevel;
 
-- (NSString *)getPECPM;
+- (nullable NSString *)getPECPM;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息
@@ -131,7 +134,7 @@
  * @param completion 发送成功或失败回调
  */
 - (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
-                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+                          completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 
 /**
  * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
@@ -141,13 +144,13 @@
  * @param completion 发送成功或失败回调
  */
 - (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
-                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+                    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 
 /**
  * 获取Bidding token
  * @return 媒体ADX请求广告所需的token
  */
-- (NSString *)getBiddingToken;
+- (nullable NSString *)getBiddingToken;
 
 /**
  * 请求bidding广告
@@ -160,8 +163,10 @@
  * @param key 需要获取的key字段
  * @return 字段的字符串
  */
-- (NSString *)getAdDataForKey:(NSString *)key;
+- (nullable NSString *)getAdDataForKey:(NSString *)key;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* ADMSplash_h */
