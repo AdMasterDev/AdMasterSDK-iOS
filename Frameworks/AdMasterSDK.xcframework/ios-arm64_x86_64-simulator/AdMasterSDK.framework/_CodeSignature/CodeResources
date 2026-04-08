@@ -98,7 +98,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vI5ahMtIRJiCQUifTLrNsvzYi7U=
+		OB5Zdnu9/ij9IG36x8Is2X5h7KY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -117,10 +117,6 @@
 	<dict>
 		<key>Headers/ADMAdActButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Vr60aKlRRnVGEA+XJnNcbtae4xM=
-			</data>
 			<key>hash2</key>
 			<data>
 			9Gxf8tNfi9p5NmOmajnEjM2T+DdzZaHK7HVZuwq6o2g=
@@ -128,10 +124,6 @@
 		</dict>
 		<key>Headers/ADMBannerDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1BsH6jtKm5Z1s16seKx8wyU8b8Y=
-			</data>
 			<key>hash2</key>
 			<data>
 			z7iihpZcNxdjruiTi5Ix+P5L1uDd7s5rULtWl8KQBHE=
@@ -139,10 +131,6 @@
 		</dict>
 		<key>Headers/ADMBannerView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/nlEoxMNihX8kdAbTvcusaWWSR8=
-			</data>
 			<key>hash2</key>
 			<data>
 			DlgeA78WQjdKXdLrb3FIbfUzvnBSxDSqccN+RJDVWPg=
@@ -150,10 +138,6 @@
 		</dict>
 		<key>Headers/ADMCommonConfig.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1Sx0fW3T7okAoJV0VRC0MECMomI=
-			</data>
 			<key>hash2</key>
 			<data>
 			Rp6zlqZ1EfvCObvWrMy5LF1qmySguo3yDDXwaVhoWEU=
@@ -161,10 +145,6 @@
 		</dict>
 		<key>Headers/ADMExpressIntDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			zKuQMIgyvU1jmwN2KGd4mu5KBAs=
-			</data>
 			<key>hash2</key>
 			<data>
 			OPl8V3riGR1O0qTn9dQQ+sytpkTFcjKGvYKx7J/8TPU=
@@ -172,10 +152,6 @@
 		</dict>
 		<key>Headers/ADMExpressInterstitial.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9uR9RGkAvcPg1jwT9L522uu0/BY=
-			</data>
 			<key>hash2</key>
 			<data>
 			2S3zln9VuOWhrzTBmmwSt9WitwwWZW+ngGdcx897r00=
@@ -183,10 +159,6 @@
 		</dict>
 		<key>Headers/ADMManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1UCa7mLNVoJ2SGn5k6iUKXO73wo=
-			</data>
 			<key>hash2</key>
 			<data>
 			KmMC0/9BRZQx7aq+c7wc0HyetGGs+KdNGjwaknSW0ZQ=
@@ -194,10 +166,6 @@
 		</dict>
 		<key>Headers/ADMNative.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cBYkxuBNO71gnQw7WaTsLnclDqE=
-			</data>
 			<key>hash2</key>
 			<data>
 			/25QojpuDw9F9wkatQxblW7CI0mt1uReCpLhAfgsaWQ=
@@ -205,10 +173,6 @@
 		</dict>
 		<key>Headers/ADMNativeAdDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6ojJBeJOLyZDaO4KzvZ/A5b89RU=
-			</data>
 			<key>hash2</key>
 			<data>
 			i98OoPEx0nMaKN1c9eAt12eI/Kc+40x5jnVDAoawhyE=
@@ -216,10 +180,6 @@
 		</dict>
 		<key>Headers/ADMNativeAdObject.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kf0X0vaurq3j3Z2eSWLhqV+53SY=
-			</data>
 			<key>hash2</key>
 			<data>
 			0u8EfQVobRQ8LJzbaFmdzpx1WYPB2e3eq+mifbnggW4=
@@ -227,10 +187,6 @@
 		</dict>
 		<key>Headers/ADMNativeAdView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			y7Dnbebc2g15cVZb/5qvjf+yI98=
-			</data>
 			<key>hash2</key>
 			<data>
 			2i4juugsMWIWoTKRN1VEJKCUQGBLvy99enZxuqlfoz0=
@@ -238,10 +194,6 @@
 		</dict>
 		<key>Headers/ADMNativeInterationDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			aJ6yJtkbVppQfInfdjHUDTPsZnI=
-			</data>
 			<key>hash2</key>
 			<data>
 			EgP9JLW4b2wkAZmxE3nWEakmQ/DdTiO8oAydWyr9/Vs=
@@ -249,10 +201,6 @@
 		</dict>
 		<key>Headers/ADMNativeVideoView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			TNCD+FYvkiwtvTK6ZeuiRiLyktA=
-			</data>
 			<key>hash2</key>
 			<data>
 			K9K45FHMqk3QvpCcrR6WwwRQjGM4sMSbuXJaAuPmtO4=
@@ -260,10 +208,6 @@
 		</dict>
 		<key>Headers/ADMNativeVideoViewDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZxPK7broxmdoPbWkY8bFk7oIqkI=
-			</data>
 			<key>hash2</key>
 			<data>
 			u3ZOZ5+9j/CD9NQo/D6SGJc7KvJBMjCh/NewdxuuIzo=
@@ -271,10 +215,6 @@
 		</dict>
 		<key>Headers/ADMPermissionSettings.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			M4ijERxYXDv5XNJ4bc+ReJ6c78E=
-			</data>
 			<key>hash2</key>
 			<data>
 			4zEge8n9TYZbOUTQP/PQe835SygoJOvYOeOOHForpz4=
@@ -282,10 +222,6 @@
 		</dict>
 		<key>Headers/ADMRenderEventDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oIAWQhFNQYRz6y7pO0IEvp2Sghw=
-			</data>
 			<key>hash2</key>
 			<data>
 			0bcrect4+CIw4WLllJ7CBuvBL6owd+N2SFR0oZWMO6k=
@@ -293,10 +229,6 @@
 		</dict>
 		<key>Headers/ADMRewardVideo.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VJWyh4523I7ctW2miQamgVqZ7ek=
-			</data>
 			<key>hash2</key>
 			<data>
 			m51kch2VU1tzu1K7d5Dgdul8i2+7SsyGthZwA7kU4UU=
@@ -304,10 +236,6 @@
 		</dict>
 		<key>Headers/ADMRewardVideoDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			qkuArbsw3S8kBAX2NVVOZteSibQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			95GKKYYN2R0dCb/aHHv2BylrUD/u425RRm68CAaNgaU=
@@ -315,10 +243,6 @@
 		</dict>
 		<key>Headers/ADMSetting.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OwLoPHUxjfCNARaKYxNmvm3Dxks=
-			</data>
 			<key>hash2</key>
 			<data>
 			eLrr7DNOwCBByDPSQcroiWtCoe4ceW9Dl/JGggQ9MnE=
@@ -326,10 +250,6 @@
 		</dict>
 		<key>Headers/ADMSplash.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			mPDg3PoAbxWpccG2JW4g8d1NKHA=
-			</data>
 			<key>hash2</key>
 			<data>
 			iwgHjpVUKpEtQEFaGuFiZAyr1lW4+C45IGfFiuiqPN4=
@@ -337,10 +257,6 @@
 		</dict>
 		<key>Headers/ADMSplashDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jln78aMLNQSaYlLTlZgYSdfLUUE=
-			</data>
 			<key>hash2</key>
 			<data>
 			rXOL0JaYATOwn/5JNR0uxTjrink/B7luWrGc0uIMtww=
@@ -348,10 +264,6 @@
 		</dict>
 		<key>Headers/ADMVideoView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yjmmxfW1raoVy6AXre0HNWIlNXk=
-			</data>
 			<key>hash2</key>
 			<data>
 			KfBvw4rX0kEans9fshLpDeYfHeFhG+mWk0wXGOXr9lQ=
@@ -359,10 +271,6 @@
 		</dict>
 		<key>Headers/AdMasterSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0ZgAvewsPTyIgIqurp2ZL4TFOZo=
-			</data>
 			<key>hash2</key>
 			<data>
 			EW9xxwMRUV8TUzyl6olWaCPstv0TUkQI/2wQ6MSjPtU=
@@ -370,10 +278,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SLJHgl/8HrsjYrrrdjck3IhhBLU=
-			</data>
 			<key>hash2</key>
 			<data>
 			D/c6EqI3MybCfRnNmA5Ifpgnwksfgp6dS7BAP9oYT00=
@@ -381,10 +285,6 @@
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FZ8cfJEsHp/pEytM2/jZoKe55U8=
-			</data>
 			<key>hash2</key>
 			<data>
 			8tZVrJn1mBGBmzVpO97LZYbEtjL8b2BaBz5Ikv38M2I=
@@ -392,10 +292,6 @@
 		</dict>
 		<key>README.md</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8KZ526jVhBNI+pPiNUd4uqZUNmo=
-			</data>
 			<key>hash2</key>
 			<data>
 			1fO3xqcxzkxIZ5PrCvyUE33ka4N1tmel1mWNlt9AEAo=
