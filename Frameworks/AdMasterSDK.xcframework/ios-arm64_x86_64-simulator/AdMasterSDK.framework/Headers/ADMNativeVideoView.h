@@ -17,71 +17,68 @@
 @property BOOL supportControllerView;
 @property BOOL supportActImage;
 
-@property (nonatomic, weak) id<ADMNativeVideoViewDelegate> videoDelegate; //视频事件delegate
+@property (nonatomic, weak) id<ADMNativeVideoViewDelegate> videoDelegate;
 
 /**
- 初始化方法
-
- @param frame videoView尺寸
- @param object ADMNativeAdObject
- @return ADMVideoView
+ * Designated initializer.
+ *
+ * @param frame View size
+ * @param object ADMNativeAdObject
+ * @return ADMNativeVideoView instance
  */
 - (instancetype)initWithFrame:(CGRect)frame andObject:(ADMNativeAdObject *)object;
 
 /**
- 设置AVAudioSessionCategory，play之前调用
+ * Set AVAudioSession category; call before play.
  */
 - (void)setAudioSessionCategory:(AVAudioSessionCategory)category;
 
 /**
- 开始播放
- 重要：建议广告非自动播放时调用
+ * Start playback (recommended when autoplay is off).
  */
 - (void)play;
 
 /**
- 继续播放
+ * Resume playback.
  */
 - (void)resume;
 
 /**
- 暂停播放
+ * Pause playback.
  */
 - (void)pause;
 
 /**
- 销毁播放器
+ * Stop and tear down the player.
  */
 - (void)stop;
 
 /**
- 重新播放
+ * Replay from the beginning.
  */
 - (void)replay;
 
 /**
- 是否播放中
-
- @return isPlaying
+ * Whether playback is in progress.
  */
 - (BOOL)isPlaying;
 
 /**
- 设置静音
-
- @param mute YES静音   NO非静音
+ * Mute or unmute.
+ *
+ * @param mute YES muted, NO unmuted
  */
 - (void)setVideoMute:(BOOL)mute;
 
 /**
- 刷新视图frame
+ * Update layout for a new frame.
  */
 - (void)reSize;
 
 /**
- 触发播放，仅设置wifi自动播放后生效。建议屏幕滑动停止后调用
- 重要：5.351版本后，该接口可不调用，SDK内对视频曝光自检测
-*/
+ * Trigger playback when Wi‑Fi autoplay is enabled. Call after scroll stops.
+ * Since 5.351, optional: SDK auto-detects viewability for exposure-based play.
+ */
 - (BOOL)render;
 
 @end

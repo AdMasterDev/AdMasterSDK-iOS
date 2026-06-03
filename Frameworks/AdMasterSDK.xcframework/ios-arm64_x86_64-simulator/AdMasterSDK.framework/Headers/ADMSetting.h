@@ -12,45 +12,53 @@
 @interface ADMSetting : NSObject
 
 /**
- * 是否测试模式，默认关闭
- * ⚠️仅测试使用，Release版本请确保不调用，否则将无法计费
+ * Test mode. Default NO.
+ * Marks requests as test traffic on the real bidding path.
+ * For testing only. Do not enable in release builds.
  */
 @property (nonatomic, assign) BOOL isTest;
+
+/**
+ * Mock mode. Default NO.
+ * Returns fixed test ads without bidding or billing.
+ * For integration testing only. Do not enable in release builds.
+ */
+@property (nonatomic, assign) BOOL isMock;
 
 @property (nonatomic, assign) BOOL trackCrash;
 
 + (ADMSetting *)sharedInstance;
 
 /**
- * 设置视频缓存阀值，单位M, 取值范围15M-100M,默认70M
+ * Max video cache size in MB. Range 15–100, default 70.
  */
 + (void)setMaxVideoCacheCapacityMb:(NSInteger)capacity;
 
 /**
- 关闭SDK 打印日志开关
-
- @param debugLogEnable YES开启  默认YES
+ * Enable or disable SDK debug logs.
+ * Debug logs are disabled by default and should be enabled only while testing.
+ * @param debugLogEnable YES to enable (default NO).
  */
 - (void)setDebugLogEnable:(BOOL)debugLogEnable;
 
 /**
- * 限制个性化广告
- * @param limit YES限制，默认NO
+ * Limit personalized ads.
+ * @param limit YES to limit (default NO).
  */
 - (void)setLimitPersonalAds:(BOOL)limit;
 
 /**
- * 获取个性化广告限制状态，默认不限制
+ * Whether personalized ads are limited (default not limited).
  */
 - (BOOL)getLimitPersonalAds;
 
 /**
- * 获取SDK Version
+ * SDK version string.
  */
 - (NSString *)getSDKVersion;
 
 /**
- * 从UserDefault读取CMP写入的GDPR同意相关信息
+ * GDPR consent info written by CMP to NSUserDefaults.
  */
 - (NSDictionary *)getGDPRInformation;
 

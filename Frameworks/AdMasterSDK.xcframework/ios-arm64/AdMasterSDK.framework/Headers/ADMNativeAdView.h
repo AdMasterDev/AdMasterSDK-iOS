@@ -18,86 +18,86 @@
 @interface ADMNativeAdView : UIView
 
 /**
- * 小图
+ * Icon image view.
  */
 @property (strong, nonatomic) UIImageView *iconImageView;
 
 /**
- * 大图
+ * Main image view.
  */
 @property (strong, nonatomic) UIImageView *mainImageView;
 
 /**
- 多图
+ * Multi-image views.
  */
 @property (strong, nonatomic) NSMutableArray *morePicsArray;
 
 /**
- * 广告标示
+ * Ad disclosure badge.
  */
 @property (strong, nonatomic) UIImageView *adLogoImageView;
 
 /**
- * logo
+ * Network logo.
  */
 @property (strong, nonatomic) UIImageView *admLogoImageView;
 
 /**
- * 标题 view
+ * Title label.
  */
 @property (strong, nonatomic) UILabel *titleLabel;
 
 /**
- * 描述 view
+ * Description label.
  */
 @property (strong, nonatomic) UILabel *textLabel;
 
 /**
- * 品牌名称 view
+ * Brand name label.
  */
 @property (strong, nonatomic) UILabel *brandLabel;
 
 /**
- * 用户点击行为按钮
+ * CTA button.
  */
 @property (strong, nonatomic) ADMAdActButton *actButton;
 
 /**
- * 视频 view
+ * Video view.
  */
 @property (strong, nonatomic) ADMNativeVideoView *videoView;
 
 /**
- * web view
+ * Web view (template ads).
  */
 @property (strong, nonatomic) ADMNativeWebView *webView;
 
 
 /**
- * 关闭按钮 view
+ * Close button.
  */
 @property (strong, nonatomic) UIButton *closeButton;
 
 /**
- *  展示用的vc, 可以不传
+ * View controller for landing page (optional).
  */
 @property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
- *  广告数据对象
-*/
+ * Bound ad object.
+ */
 @property (nonatomic, strong, readonly) ADMNativeAdObject *object;
 
 /**
- 常规大图信息流 MaterialType是NORMAL的初始化方法
- 
- @param frame 信息流视图大小
- @param brandLabel 品牌名称
- @param titleLabel 标题
- @param textLabel 描述
- @param iconView 图标
- @param mainView 大图
- @return 信息流视图
+ * Standard large-image native ad initializer (ADMMaterialType NORMAL).
+ *
+ * @param frame View size
+ * @param brandLabel Brand label
+ * @param titleLabel Title label
+ * @param textLabel Description label
+ * @param iconView Icon view
+ * @param mainView Main image view
+ * @return Native ad view
  */
 - (instancetype)initWithFrame:(CGRect)frame
           brandName:(UILabel *)brandLabel
@@ -107,7 +107,7 @@
           mainImage:(UIImageView *)mainView;
 
 /**
- * 多图信息流，MaterialType是NORMAL的初始化方法
+ * Multi-image native ad initializer (ADMMaterialType NORMAL).
  */
 - (instancetype)initWithFrame:(CGRect)frame
           brandName:(UILabel *)brandLabel
@@ -118,8 +118,8 @@
            morepics:(NSMutableArray *)imageViewArray;
 
 /**
- * 信息流视频
- * 推荐使用SDK的ADMNativeVideoView视频组件，也可自定义视频view传入
+ * Video native ad initializer.
+ * Prefer ADMNativeVideoView; custom video views are also supported.
  */
 - (instancetype)initWithFrame:(CGRect)frame
           brandName:(UILabel *)brandLabel
@@ -136,20 +136,20 @@
           mainImage:(UIImageView *)mainView
           videoView:(ADMNativeVideoView *)videoView;
 /**
- * 信息流模板
+ * Template native ad initializer.
  */
 - (instancetype)initWithFrame:(CGRect)frame
             webview:(ADMNativeWebView *) webView;
 
 /**
- * 广告渲染
+ * Load and render the native ad.
  */
 - (void)loadAndDisplayNativeAdWithObject:(ADMNativeAdObject *)object completion:(ADMViewCompletionBlock)completionBlock;
 
 /**
- 手动触发视频播放 仅在WiFi自动播放场景下生效
-
- @return 视频播放状态，是否播放中 YES正常播放  NO未播放
+ * Start video playback manually (Wi‑Fi autoplay only).
+ *
+ * @return YES if playing, NO otherwise
  */
 - (BOOL)render;
 

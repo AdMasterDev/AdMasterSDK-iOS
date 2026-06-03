@@ -15,7 +15,7 @@
 @interface ADMAdActButton : UIButton
 
 /**
- * 设置用户点击行为的文案
+ * Sets CTA label text from the ad object.
  */
 - (void)setData:(ADMNativeAdObject *)object;
 

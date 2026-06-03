@@ -2,13 +2,12 @@
 //  ADMBannerDelegate.h
 //  AdMasterSDK
 //
-//  Created by AdMasterDev on 2025/6/24.
-//
 
 #ifndef ADMBannerDelegate_h
 #define ADMBannerDelegate_h
 
 #import <Foundation/Foundation.h>
+#import <AdMasterSDK/ADMError.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,35 +18,12 @@ NS_SWIFT_NAME(BannerDelegate)
 
 @optional
 
-/**
- * Ad loaded successfully
- */
-- (void)bannerViewDidLoadAd:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
-
-/**
- * Ad failed to load
- */
-- (void)bannerView:(nonnull ADMBannerView *)bannerView didFailToLoadAdWithError:(nonnull NSError *)error NS_SWIFT_UI_ACTOR;
-
-/**
- * Ad impression successful
- */
-- (void)bannerViewDidImpression:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
-
-/**
- * Ad display failed
- */
+- (void)bannerViewDidReceiveAd:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
+- (void)bannerView:(nonnull ADMBannerView *)bannerView didFailToReceiveAdWithError:(nonnull NSError *)error NS_SWIFT_UI_ACTOR;
+- (void)bannerViewDidRecordImpression:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
 - (void)bannerView:(nonnull ADMBannerView *)bannerView didFailToDisplayAdWithError:(nonnull NSError *)error NS_SWIFT_UI_ACTOR;
-
-/**
- * Ad clicked
- */
-- (void)bannerViewDidClick:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
-
-/**
- * Ad closed
- */
-- (void)bannerViewDidClose:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
+- (void)bannerViewDidRecordClick:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
+- (void)bannerViewDidDismiss:(nonnull ADMBannerView *)bannerView NS_SWIFT_UI_ACTOR;
 
 @end
 

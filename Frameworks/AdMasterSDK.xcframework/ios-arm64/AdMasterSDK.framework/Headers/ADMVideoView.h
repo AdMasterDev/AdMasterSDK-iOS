@@ -18,44 +18,44 @@
 @optional
 
 /**
- 视频准备开始播放
- 
- @param videoView self
+ * Video is about to start playing.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidStartPlaying:(ADMVideoView *)videoView;
 
 /**
- 视频暂停播放
- 
- @param videoView self
+ * Video paused.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidPause:(ADMVideoView *)videoView;
 
 /**
- 视频重播
- 
- @param videoView self
+ * Video replayed.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidReplay:(ADMVideoView *)videoView;
 
 /**
- 视频播放完成
-
- @param videoView self
+ * Playback completed.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidComplete:(ADMVideoView *)videoView;
 
 /**
- 视频播放失败
-
- @param videoView self
+ * Playback failed.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidFailed:(ADMVideoView *)videoView;
 
 /**
- 视频发生点击
- 
- @param videoView self
+ * Video clicked.
+ *
+ * @param videoView self
  */
 - (void)fullscreenVideoAdDidClick:(ADMVideoView *)videoView;
 
@@ -66,83 +66,77 @@
 @property (nonatomic, weak) id<ADMVideoViewDelegate> delegate;
 
 /**
- * 广告素材type
+ * Creative material type.
  */
 @property (nonatomic, assign) ADMMaterialType materialType;
 
 /**
- 初始化方法
-
- @param frame videoView尺寸
- @param object ADMNativeAdObject
- @return ADMVideoView
+ * Designated initializer.
+ *
+ * @param frame View size
+ * @param object ADMNativeAdObject
+ * @return ADMVideoView instance
  */
 - (instancetype)initWithFrame:(CGRect)frame andObject:(id)object;
 
 /**
- 设置AVAudioSessionCategory，play之前调用
+ * Set AVAudioSession category; call before play.
  */
 - (void)setAudioSessionCategory:(AVAudioSessionCategory)category;
 
 /**
- 开始播放
+ * Start playback.
  */
 - (void)play;
 
 /**
- 重新播放
+ * Replay from the beginning.
  */
 - (void)replay;
 
 /**
- 暂停播放
+ * Pause playback.
  */
 - (void)pause;
 
 /**
- 销毁播放器
+ * Stop and tear down the player.
  */
 - (void)stop;
 
 /**
- 设置隐藏暂停按钮，默认显示，请在play前调用
- 
- @param hidden YES隐藏  NO显示
+ * Hide the pause button (shown by default). Call before play.
+ *
+ * @param hidden YES to hide, NO to show
  */
 - (void)hidePauseButton:(BOOL)hidden;
 
 /**
- 设置静音
-
- @param mute YES静音   NO非静音
+ * Mute or unmute.
+ *
+ * @param mute YES muted, NO unmuted
  */
 - (void)setVideoMute:(BOOL)mute;
 
 /**
- 是否播放中
-
- @return isPlaying
+ * Whether playback is in progress.
  */
 - (BOOL)isPlaying;
 
 /**
- 当前播放时间
-
- @return 当前播放时间
+ * Current playback time.
  */
 - (NSTimeInterval)currentTime;
 
 /**
- 视频总时长
-
- @return 视频总时长
+ * Total video duration.
  */
 - (NSTimeInterval)duration;
 
-#pragma mark - 计费相关视频事件 重要！
+#pragma mark - Billing (important)
 
 /**
- 视频点击事件 点击计费接口
+ * Video click for click billing.
  */
 - (void)handleClick;
 

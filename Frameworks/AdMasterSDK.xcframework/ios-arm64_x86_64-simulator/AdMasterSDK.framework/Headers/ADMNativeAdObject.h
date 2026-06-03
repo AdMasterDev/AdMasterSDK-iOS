@@ -3,7 +3,7 @@
 //  AdMasterSDK
 //
 //  Created by lishan04 on 15-5-26.
-//  Copyright (c) 2015年 lishan04. All rights reserved.
+//  Copyright (c) 2015  lishan04. All rights reserved.
 //
 
 #ifndef ADMNativeAdObject_h
@@ -11,162 +11,178 @@
 
 #import <Foundation/Foundation.h>
 #import <AdMasterSDK/ADMCommonConfig.h>
+#import <AdMasterSDK/ADMNativeInteractionDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol ADMNativeInterationDelegate;
 
 @interface ADMNativeAdObject : NSObject
 
 /**
- * 广告交互 delegate
+ * Interaction delegate.
  */
-@property (nonatomic, weak) id<ADMNativeInterationDelegate> interationDelegate;
+@property (nonatomic, weak) id<ADMNativeInteractionDelegate> interactionDelegate;
 
 /**
- * 标题 text
+ * Title text.
  */
 @property (copy, nonatomic) NSString *title;
 /**
- * 描述 text
+ * Description text.
  */
 @property (copy, nonatomic) NSString *text;
 /**
- * 小图 url
+ * Icon image URL.
  */
 @property (copy, nonatomic) NSString *iconImageURLString;
 /**
- * 大图 url
+ * Main image URL.
  */
 @property (copy, nonatomic) NSString *mainImageURLString;
 
 /**
- * 多图信息流的image url array
+ * Multi-image native ad URLs.
  */
-@property (strong, nonatomic) NSArray *morepics;
+@property (nullable, strong, nonatomic) NSArray *morepics;
 /**
- * 视频url
+ * Video URL.
  */
 @property (copy, nonatomic) NSString *videoURLString;
 /**
- * 视频时长，单位为s
+ * Video duration in seconds.
  */
 @property (strong, nonatomic) NSNumber *videoDuration;
 /**
- * 自动播放
+ * Autoplay flag.
  */
 @property (strong, nonatomic) NSNumber *autoPlay;
 /**
- * 品牌名称，若广告返回中无品牌名称则为空
+ * Brand name (empty if not returned).
  */
 @property (copy, nonatomic) NSString *brandName;
 /**
-* 开发者配置可接受视频后，对返回的广告单元，需先判断ADMMaterialType再决定使用何种渲染组件
+ * After enabling video in your integration, check ADMMaterialType before choosing a renderer.
  */
 @property (assign, nonatomic) ADMMaterialType materialType;
 
 /**
- * 返回广告单元的点击类型
+ * Click action type for this ad unit.
  */
 @property (assign, nonatomic) ADMNativeAdActionType actType;
 
 /**
- * 大图图片宽
+ * Main image width.
  */
 @property (assign, nonatomic) float w;
 /**
- * 大图图片高
+ * Main image height.
  */
 @property (assign, nonatomic) float h;
 
 /**
- * 大图宽高比
+ * Main image aspect ratio.
  */
 @property (assign, nonatomic) float aspectRatio;
 
 /**
- 价格标签
+ * Price tier label.
  */
 @property (copy, nonatomic, readonly) NSString *ECPMLevel;
 
 /**
- 用户点击行为
+ * CTA label for user click action.
  */
 @property (copy, nonatomic) NSString *actButtonString;
 
-#pragma mark - 智能优选
+#pragma mark - Express / smart layout
 /**
- 信息流广告容器宽
+ * Native ad container width.
  */
 @property (nonatomic, assign) int container_width;
 /**
- 信息流广告容器高
+ * Native ad container height.
  */
 @property (nonatomic, assign) int container_height;
 
 /**
- *  使用controller present 落地页，覆盖ADMNative的配置
+ * View controller to present landing page (overrides ADMNative setting).
  */
 - (void)setPresentAdViewController:(UIViewController *)presentAdViewController;
 
 /**
- *  广告价格标签
+ * Report dislike / negative feedback to ``interactionDelegate``.
+ */
+- (void)reportDislikeWithReasonCode:(NSInteger)reasonCode;
+
+/**
+ * Price tier label (eCPM level).
  */
 - (NSString *)getECPMLevel;
 
 - (NSString *)getPECPM;
 
 /**
- * 竞价成功，上报竞价失败排名第二的信息
- * @param secondInfo 竞败方，排名第二的信息
- *        Key：ecpm Value：为本次竞败方排名第二的价格（单位：分），类型为Integer。选填
- *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
- * @param completion 发送成功或失败回调
+ * Report bidding win and send second-place loser info.
+ * @param secondInfo Second-place loser info
+ *        Key: ecpm  Value: second-place bid in cents (Integer). Optional
+ *        Key: adn   Value: second-place ADN channel ID (Integer). See docs for enum values
+ * @param completion Callback when send succeeds or fails
  */
 - (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
                           completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
- * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
- * @param winInfo 竞胜方的信息
- *        Key：ecpm Value：为本次竞胜方出价（单位：分），类型为Integer。选填
- *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
- * @param completion 发送成功或失败回调
+ * Report bidding loss with reason; may report winner info when no ad fill.
+ * @param winInfo Winner info
+ *        Key: ecpm  Value: winning bid in cents (Integer). Optional
+ *        Key: adn   Value: winner ADN channel ID (Integer). See docs for enum values
+ * @param completion Callback when send succeeds or fails
  */
 - (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
                     completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
- * 是否过期，默认为false，2h后过期，需要重新请求广告
+ * Whether the ad expired (default valid 2h; request again if expired).
  */
 - (BOOL)isExpired;
 
 /**
- * 官网logo点击
+ * Ad network logo tap handler.
  */
 - (void)admLogoClick:(UIView *)admLogoView;
 
 /**
- * 根据key获取广告相关字段
- * @param key 需要获取的key字段
- * @return 字段的字符串
+ * Ad field by key.
+ * @param key Field name
+ * @return String value
  */
 - (NSString *)getAdDataForKey:(NSString *)key;
 
 /**
- * 注册视图用于交互事件
- * @param containerView 容器视图
- * @param mediaView 视频/图片视图
- * @param clickableViews 可点击视图
- * @param viewController 视图控制器
+ * Load image asset with SDK cache.
+ * The SDK returns cached image data first. If no cache exists, it downloads the
+ * image, stores it in cache, and then calls completion on main thread.
+ *
+ * @param URLString Image URL string.
+ * @param completion Main-thread callback. image is nil when URL is empty,
+ *        invalid, download fails, or data cannot be decoded as UIImage.
+ */
+- (void)loadImageWithURLString:(nullable NSString *)URLString
+                    completion:(nullable void (^)(UIImage * _Nullable image))completion;
+
+/**
+ * Register views for click and impression tracking.
+ * @param containerView Container view
+ * @param mediaView Video or image view
+ * @param clickableViews Tappable views
+ * @param viewController View controller for landing page
  */
  - (void)registerViewForInteraction:(UIView *)containerView
                           mediaView:(UIView *)mediaView
                      clickableViews:(NSArray<UIView *> *)clickableViews
                      viewController:(UIViewController *)viewController;
 /**
- * 注销视图交互事件
- * @param view 容器视图
+ * Unregister interaction for the container view.
+ * @param view Container view
  */
 - (void)unregisterView:(UIView *)view;
 @end

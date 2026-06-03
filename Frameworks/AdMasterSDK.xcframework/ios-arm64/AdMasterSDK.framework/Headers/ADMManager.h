@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ADMManager : NSObject
 
-/// 初始化函数，SDK可在此函数做些预初始化
+/// Initializes the SDK (pre-initialization work may run here).
 + (void)startWithAppsid:(NSString *)appsid completionHandler:(void (^)(BOOL, NSError * _Nullable))completionHandler;
 
 + (NSString *)getSDKVersion;

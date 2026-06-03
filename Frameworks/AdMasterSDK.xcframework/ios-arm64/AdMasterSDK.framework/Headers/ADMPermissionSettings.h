@@ -18,14 +18,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedInstance;
 
 /**
- * 设置是否允许获取IDFA
- * @param permissionGranted YES允许，默认YES
+ * Allow the SDK to read and send IDFA in ad requests.
+ * When NO, ``idfa`` is sent as an empty string.
+ * When YES, IDFA is read only if ATT allows tracking (iOS 14+) or LAT is enabled (earlier OS); the value is sent as-is, including all-zero UUID.
+ * The host app must present the ATT prompt; the SDK does not call ``requestTrackingAuthorization``.
+ * @param permissionGranted YES to allow (default YES).
  */
 - (void)setReadDeviceIdPermission:(BOOL)permissionGranted;
 
 /**
- * 设置是否允许获取设备存储信息
- * @param permissionGranted YES允许，默认YES
+ * Allow reading device storage info.
+ * @param permissionGranted YES to allow (default YES).
  */
 - (void)setReadStorageInfoPermission:(BOOL)permissionGranted;
 
