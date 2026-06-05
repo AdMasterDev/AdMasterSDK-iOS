@@ -26,6 +26,18 @@ NS_SWIFT_NAME(BannerView)
 - (void)loadAd;
 - (BOOL)isReady;
 
+- (nullable NSString *)getBiddingToken;
+- (void)loadBiddingAdWithTokenId:(NSString *)tokenId;
+- (void)loadBiddingAdWithADMData:(NSString *)admData;
+- (nullable NSString *)getECPMLevel;
+- (nullable NSString *)getPECPM;
+- (nullable NSString *)getAdDataForKey:(NSString *)key;
+
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
+                          completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
+                    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

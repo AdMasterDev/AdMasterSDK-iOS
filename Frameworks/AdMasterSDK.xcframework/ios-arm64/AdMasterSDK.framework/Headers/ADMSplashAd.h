@@ -29,36 +29,13 @@ typedef void (^ADMSplashAdLoadCompletionHandler)(ADMSplashAd *_Nullable splashAd
 
 @end
 
-@protocol ADMSplashCardViewDelegate <NSObject>
-
-@optional
-
-- (void)splashCardViewDidExposure:(ADMSplashAd *)splash;
-- (void)splashCardViewDidClicked:(ADMSplashAd *)splash;
-- (void)splashCardViewDidClose:(ADMSplashAd *)splash;
-@end
-
-@protocol ADMSplashFocusZoomOutViewDelegate <NSObject>
-
-@optional
-
-- (void)splashFocusZoomOutViewDidExposure:(ADMSplashAd *)splash;
-- (void)splashFocusZoomOutViewDidClicked:(ADMSplashAd *)splash;
-- (void)splashFocusZoomOutViewDidClose:(ADMSplashAd *)splash;
-@end
-
 @interface ADMSplashAd : NSObject
 
 @property (nonatomic, weak, nullable) id<ADMSplashDelegate> delegate;
 @property (nonatomic, weak, nullable) id<ADMFullScreenContentDelegate> fullScreenContentDelegate;
-@property (nonatomic, weak, nullable) id<ADMSplashCardViewDelegate> cardDelegate;
-@property (nonatomic, weak, nullable) id<ADMSplashFocusZoomOutViewDelegate> zoomOutDelegate;
 @property (nonatomic, copy) ADMRequest *request;
-@property (nonatomic, assign, readonly) BOOL hasCardView;
-@property (nonatomic, assign, readonly) BOOL hasZoomOutView;
 @property (nonatomic, copy, readonly) NSString *publisherId;
 @property (nonatomic, copy) NSString *adUnitTag;
-@property (nonatomic, assign) BOOL canSplashClick;
 @property (nonatomic, assign) CGSize adSize;
 @property (nonatomic, weak, nullable) UIViewController *presentAdViewController;
 @property (nonatomic, copy, readonly, nullable) NSString *materialType;
@@ -77,9 +54,7 @@ typedef void (^ADMSplashAdLoadCompletionHandler)(ADMSplashAd *_Nullable splashAd
              presentingViewController:(nullable UIViewController *)viewController;
 - (void)loadAndPresentInKeyWindow:(nullable UIWindow *)keyWindow;
 - (void)stop;
-- (void)resizeLayout;
 
-- (nullable NSString *)getExtData;
 - (nullable NSString *)getECPMLevel;
 - (nullable NSString *)getPECPM;
 - (nullable NSString *)getBiddingToken;
