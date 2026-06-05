@@ -2,7 +2,7 @@
 
 AdMasterSDK passes errors to delegates and completion callbacks through `NSError`. Integrators should log the `domain`, `code`, `localizedDescription`, and key `userInfo` fields to support troubleshooting.
 
-## Domain
+## Error Domain
 
 | Constant | Value |
 | --- | --- |
