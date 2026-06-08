@@ -8,7 +8,7 @@
 #import <AdMasterSDK/AdMasterSDK.h>
 #import <AppLovinSDK/AppLovinSDK.h>
 
-#define ADAPTER_VERSION @"2.0.1.0"
+#define ADAPTER_VERSION @"2.0.1.1"
 
 static NSString *const kADMMaxServerKeyAppId = @"app_id";
 static NSString *const kADMMaxServerKeyAdUnitId = @"ad_unit_id";

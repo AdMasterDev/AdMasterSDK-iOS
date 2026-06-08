@@ -110,3 +110,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 | [interstitial_ad.md](Docs/interstitial_ad.md) | Interstitial ads (`ADMInterstitialAd`). |
 | [native_ad.md](Docs/native_ad.md) | Native ads (`ADMNativeAdLoader`). |
 | [rewarded_ad.md](Docs/rewarded_ad.md) | Rewarded video ads (`ADMRewardedAd`). |
+| [gad_mediation_adapter.md](Docs/gad_mediation_adapter.md) | Google Mobile Ads Mediation adapter. |
+| [max_mediation_adapter.md](Docs/max_mediation_adapter.md) | AppLovin MAX Mediation adapter. |
