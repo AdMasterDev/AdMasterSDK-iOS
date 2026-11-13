@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                             MARewardedAdapter,
                                                             MAAdViewAdapter,
                                                             MANativeAdAdapter,
-                                                            MAAdapterSignalCollectionProvider>
+                                                            MASignalProvider>
 
 @end
 

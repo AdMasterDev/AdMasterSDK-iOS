@@ -67,7 +67,7 @@ Configuration flow:
 
 ## Bidding and Win/Loss Reporting
 
-- **Signal Collection**: `ALAdMasterMediationAdapter` conforms to `MAAdapterSignalCollectionProvider` and implements `-collectSignalWithParameters:andNotify:` to collect a bidding token via AdMaster SDK's `getBiddingToken` based on `parameters.adFormat`.
+- **Signal Collection**: `ALAdMasterMediationAdapter` conforms to `MASignalProvider` and implements `-collectSignalWithParameters:andNotify:` to collect a bidding token via AdMaster SDK's `getBiddingToken` based on `parameters.adFormat`.
 - **Bidding Ad Loading**: When `parameters.bidResponse` is non-empty, the adapter automatically enters Bidding mode:
   - If `bidResponse` is an ADM JSON payload (starts with `{`), it calls `loadBiddingAdWithADMData:`.
   - If `bidResponse` is a bidding token / `adid`, it calls `loadBiddingAdWithTokenId:`.

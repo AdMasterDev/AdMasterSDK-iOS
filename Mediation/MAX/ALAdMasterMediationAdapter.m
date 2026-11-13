@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ADAPTER_VERSION @"2.1.0.0"
+#define ADAPTER_VERSION @"2.1.0.1"
 
 static NSString *const kADMMaxServerKeyAppId = @"app_id";
 static NSString *const kADMMaxServerKeyAdUnitId = @"ad_unit_id";
@@ -1631,7 +1631,7 @@ didFailToReceiveAdWithError:(NSError *)error
                      mediatedNetworkErrorMessage:@"Missing placement / ad_unit_id"];
 }
 
-#pragma mark - MAAdapterSignalCollectionProvider
+#pragma mark - MASignalProvider
 
 - (nullable NSString *)biddingTokenForParameters:(id <MASignalCollectionParameters>)parameters
                                        placement:(NSString *)placement
