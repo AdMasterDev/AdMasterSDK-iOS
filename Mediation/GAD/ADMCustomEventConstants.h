@@ -12,7 +12,7 @@
 static NSString *const ADMCustomEventErrorDomain = @"com.admaster.ADMCustomEvent";
 
 /// Version for the AdMaster Custom Event Adapter
-static NSString *const ADMCustomEventAdapterVersion = @"2.0.1.1";
+static NSString *const ADMCustomEventAdapterVersion = @"2.1.0.0";
 
 /// key for appID
 static NSString *const ADMCustomEventAppID = @"app_id";
@@ -25,5 +25,8 @@ static NSString *const ADMCustomEventIsTest = @"test";
 
 /// key for mock mode
 static NSString *const ADMCustomEventIsMock = @"mock";
+
+/// key for bid floor (cents)
+static NSString *const ADMCustomEventParameterKeyBidFloor = @"bid_floor";
 
 #endif /* ADMCustomEventConstants_h */

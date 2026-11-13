@@ -112,3 +112,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 | [rewarded_ad.md](Docs/rewarded_ad.md) | Rewarded video ads (`ADMRewardedAd`). |
 | [gad_mediation_adapter.md](Docs/gad_mediation_adapter.md) | Google Mobile Ads Mediation adapter. |
 | [max_mediation_adapter.md](Docs/max_mediation_adapter.md) | AppLovin MAX Mediation adapter. |
+| [topon_mediation_adapter.md](Docs/topon_mediation_adapter.md) | TopOn (AnyThink) Mediation adapter. |
+| [tradplus_mediation_adapter.md](Docs/tradplus_mediation_adapter.md) | TradPlus Mediation adapter. |

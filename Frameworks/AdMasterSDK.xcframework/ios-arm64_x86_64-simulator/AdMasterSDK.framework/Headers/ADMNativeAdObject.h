@@ -120,6 +120,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)getPECPM;
 
+- (void)bidWin:(NSDictionary *)secondInfo;
+- (void)bidWin:(NSDictionary *)secondInfo
+    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+- (void)bidLoss:(NSDictionary *)winInfo;
+- (void)bidLoss:(NSDictionary *)winInfo
+     completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+
 /**
  * Report bidding win and send second-place loser info.
  * @param secondInfo Second-place loser info
@@ -128,7 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param completion Callback when send succeeds or fails
  */
 - (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
-                          completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+                          completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 
 /**
  * Report bidding loss with reason; may report winner info when no ad fill.
@@ -138,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param completion Callback when send succeeds or fails
  */
 - (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
-                    completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+                    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 
 /**
  * Whether the ad expired (default valid 2h; request again if expired).

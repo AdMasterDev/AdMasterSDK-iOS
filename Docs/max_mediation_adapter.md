@@ -48,6 +48,7 @@ Recommended Server Parameters:
 | `mock` | No | Uses fixed test ads. Do not enable this in Release builds. |
 | `width` / `height` | No | Banner / MREC size. |
 | `banner_width` / `banner_height` | No | Banner / MREC size. Takes priority over `width` / `height`. |
+| `bid_floor` | No | Bidding floor price in cents (positive integer), passed to `ADMRequest.bidFloor`. |
 
 Configuration flow:
 
@@ -58,14 +59,24 @@ Configuration flow:
 
 ## Supported Ad Formats
 
-- App Open
-- Banner / Leader / MREC
-- Interstitial
-- Rewarded
-- Native
+- App Open (Waterfall + Bidding)
+- Banner / Leader / MREC (Waterfall + Bidding)
+- Interstitial (Waterfall + Bidding)
+- Rewarded (Waterfall + Bidding)
+- Native (Waterfall + Bidding)
+
+## Bidding and Win/Loss Reporting
+
+- **Signal Collection**: `ALAdMasterMediationAdapter` conforms to `MAAdapterSignalCollectionProvider` and implements `-collectSignalWithParameters:andNotify:` to collect a bidding token via AdMaster SDK's `getBiddingToken` based on `parameters.adFormat`.
+- **Bidding Ad Loading**: When `parameters.bidResponse` is non-empty, the adapter automatically enters Bidding mode:
+  - If `bidResponse` is an ADM JSON payload (starts with `{`), it calls `loadBiddingAdWithADMData:`.
+  - If `bidResponse` is a bidding token / `adid`, it calls `loadBiddingAdWithTokenId:`.
+- **Automatic `bidWin` / `bidLoss` Reporting**:
+  - In Bidding mode, when an ad loads or is displayed, the adapter automatically builds second-price parameters and calls `biddingSuccessWithSecondInfo:completion:` (idempotent within a single ad lifecycle).
+  - When loading fails, the ad expires, or presentation fails (before win is reported), the adapter maps error codes/reasons and calls `biddingFailWithWinInfo:completion:` (idempotent within a single ad lifecycle).
 
 ## Notes
 
-- `app_id` is used to initialize AdMasterSDK. The ad placement is resolved from the MAX Third-party Placement ID first, then from `ad_unit_id`.
-- The adapter does not support MAX bidding `bidResponse` loads. Use it as a Custom SDK Network in waterfall mediation.
+- `app_id` is used to initialize AdMasterSDK. The ad placement is resolved from the MAX Third-party Placement ID first, then from `ad_unit_id` / `placement_id`.
+- The adapter supports both Custom SDK Network waterfall mediation and Bidding (`bidResponse`) loads.
 - See [error_codes.md](error_codes.md) for AdMaster error codes.

@@ -56,10 +56,17 @@ NS_SWIFT_NAME(InterstitialDelegate)
 - (void)loadBiddingAdWithADMData:(NSString *)admData;
 - (nullable NSString *)getAdDataForKey:(NSString *)key;
 
+- (void)bidWin:(NSDictionary *)secondInfo;
+- (void)bidWin:(NSDictionary *)secondInfo
+    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+- (void)bidLoss:(NSDictionary *)winInfo;
+- (void)bidLoss:(NSDictionary *)winInfo
+     completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+
 - (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo
-                          completion:(void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+                          completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 - (void)biddingFailWithWinInfo:(NSDictionary *)winInfo
-                    completion:(void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
+                    completion:(nullable void (^)(BOOL success, NSString * _Nullable errorInfo))completion;
 
 @end
 

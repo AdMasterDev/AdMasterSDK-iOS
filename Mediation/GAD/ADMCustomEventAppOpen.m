@@ -48,6 +48,7 @@
     
     _splashAd = [[ADMSplashAd alloc] init];
     _splashAd.adUnitTag = adUnitID;
+    _splashAd.request = [ADMCustomEventUtils requestFromAdConfiguration:adConfiguration];
     _splashAd.adSize = [UIScreen mainScreen].bounds.size;
     _splashAd.delegate = self;
     _splashAd.fullScreenContentDelegate = self;

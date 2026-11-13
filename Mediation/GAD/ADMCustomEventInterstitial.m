@@ -47,6 +47,7 @@
 
     _interstitialAd = [[ADMInterstitialAd alloc] init];
     _interstitialAd.adUnitTag = adUnitID;
+    _interstitialAd.request = [ADMCustomEventUtils requestFromAdConfiguration:adConfiguration];
     _interstitialAd.delegate = self;
     _interstitialAd.fullScreenContentDelegate = self;
     [_interstitialAd load];

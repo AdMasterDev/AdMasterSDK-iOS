@@ -49,6 +49,7 @@
 
     _rewardedAd = [[ADMRewardedAd alloc] init];
     _rewardedAd.adUnitTag = adUnitID;
+    _rewardedAd.request = [ADMCustomEventUtils requestFromAdConfiguration:adConfiguration];
     _rewardedAd.delegate = self;
     _rewardedAd.fullScreenContentDelegate = self;
     [_rewardedAd load];

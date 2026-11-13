@@ -6,11 +6,19 @@
 //  Custom Network (SDK) and set iOS Adapter Class Name to ALAdMasterMediationAdapter.
 //
 
+#import <Foundation/Foundation.h>
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
 #import <AppLovinSDK/AppLovinSDK.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ALAdMasterMediationAdapter : ALMediationAdapter <MAAppOpenAdapter, MAInterstitialAdapter, MARewardedAdapter, MAAdViewAdapter, MANativeAdAdapter>
+@interface ALAdMasterMediationAdapter : ALMediationAdapter <MAAppOpenAdapter,
+                                                            MAInterstitialAdapter,
+                                                            MARewardedAdapter,
+                                                            MAAdViewAdapter,
+                                                            MANativeAdAdapter,
+                                                            MAAdapterSignalCollectionProvider>
 
 @end
 

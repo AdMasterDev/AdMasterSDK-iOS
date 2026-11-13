@@ -12,21 +12,36 @@
 #import "ADMCustomEventConstants.h"
 #import "ADMCustomEvent.h"
 
+@class ADMRequest;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ADMCustomEventUtils : NSObject
 
 + (NSError *)errorWithCode:(NSInteger)code description:(NSString *)description;
 
-+ (NSString *)appIDFromAdConfigurationParameter:(NSString *)parameter;
++ (nullable NSString *)appIDFromAdConfigurationParameter:(nullable NSString *)parameter;
 
-+ (NSString *)adUnitIDFromAdConfigurationParameter:(NSString *)parameter;
++ (nullable NSString *)adUnitIDFromAdConfigurationParameter:(nullable NSString *)parameter;
 
-+ (BOOL)isTestFromAdConfigurationParameter:(NSString *)parameter;
++ (BOOL)isTestFromAdConfigurationParameter:(nullable NSString *)parameter;
 
-+ (BOOL)isMockFromAdConfigurationParameter:(NSString *)parameter;
++ (BOOL)isMockFromAdConfigurationParameter:(nullable NSString *)parameter;
 
-+ (void)updateAdMasterRuntimeFromAdConfigurationParameter:(NSString *)parameter;
++ (int)bidFloorFromDictionary:(nullable NSDictionary *)dict;
+
++ (int)bidFloorFromAdConfigurationParameter:(nullable NSString *)parameter;
+
++ (int)bidFloorFromAdConfiguration:(nullable GADMediationAdConfiguration *)adConfiguration;
+
++ (ADMRequest *)requestFromAdConfigurationParameter:(nullable NSString *)parameter;
+
++ (ADMRequest *)requestFromAdConfiguration:(nullable GADMediationAdConfiguration *)adConfiguration;
+
++ (void)updateAdMasterRuntimeFromAdConfigurationParameter:(nullable NSString *)parameter;
+
++ (void)ensureSDKInitializedWithAdConfiguration:(nullable GADMediationAdConfiguration *)adConfiguration
+                                     completion:(nullable dispatch_block_t)completion;
 
 @end
 

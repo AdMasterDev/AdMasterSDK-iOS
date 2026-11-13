@@ -165,6 +165,7 @@ static NSURL *ADMCustomEventURLWithString(NSString *string) {
     
     _nativeAd = [[ADMNativeAdLoader alloc] init];
     _nativeAd.adUnitTag = adUnitID;
+    _nativeAd.request = [ADMCustomEventUtils requestFromAdConfiguration:adConfiguration];
     _nativeAd.delegate = self;
     [_nativeAd load];
 }
@@ -187,14 +188,14 @@ static NSURL *ADMCustomEventURLWithString(NSString *string) {
     
     dispatch_group_enter(group);
     __weak typeof(self) weakSelf = self;
-    [self loadImageFromURL:_nativeAdObject.iconImageURLString completion:^(GADNativeAdImage * _Nullable gadImage) {
+    [self loadImageFromURL:_nativeAdObject.iconImageURLString completion:^(GADNativeAdImage *_Nullable gadImage) {
         loadedIcon = gadImage;
         dispatch_group_leave(group);
     }];
     
     if (_nativeAdObject.materialType != VIDEO) {
         dispatch_group_enter(group);
-        [weakSelf loadImageFromURL:_nativeAdObject.mainImageURLString completion:^(GADNativeAdImage * _Nullable gadImage) {
+        [weakSelf loadImageFromURL:_nativeAdObject.mainImageURLString completion:^(GADNativeAdImage *_Nullable gadImage) {
             loadedImage = gadImage;
             dispatch_group_leave(group);
         }];
@@ -202,7 +203,9 @@ static NSURL *ADMCustomEventURLWithString(NSString *string) {
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (!strongSelf) return;
+        if (!strongSelf) {
+            return;
+        }
         
         strongSelf->_icon = loadedIcon;
         strongSelf->_images = (loadedImage == nil) ? @[] : @[loadedImage];
@@ -263,7 +266,7 @@ didFailToReceiveAdWithError:(NSError *)error
 
 #pragma mark Load Native Image
 
-- (void)loadImageFromURL:(NSString *)urlString completion:(void(^)(GADNativeAdImage * _Nullable gadImage))completion {
+- (void)loadImageFromURL:(NSString *)urlString completion:(void(^)(GADNativeAdImage *_Nullable gadImage))completion {
     if (urlString == nil) {
         if (completion) {
             completion(nil);
@@ -277,7 +280,7 @@ didFailToReceiveAdWithError:(NSError *)error
         }
         return;
     }
-    [_nativeAdObject loadImageWithURLString:urlString completion:^(UIImage * _Nullable image) {
+    [_nativeAdObject loadImageWithURLString:urlString completion:^(UIImage *_Nullable image) {
         if (!image) {
             if (completion) {
                 completion([[GADNativeAdImage alloc] initWithURL:url scale:[UIScreen mainScreen].scale]);

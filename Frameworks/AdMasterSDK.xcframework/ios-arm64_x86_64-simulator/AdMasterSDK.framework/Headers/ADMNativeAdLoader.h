@@ -52,6 +52,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadBiddingAdWithTokenId:(NSString *)tokenId;
 - (void)loadBiddingAdWithADMData:(NSString *)admData;
 
+- (void)bidWin:(nullable NSDictionary *)secondInfo;
+- (void)bidWin:(nullable NSDictionary *)secondInfo
+    completion:(nullable void (^)(BOOL success, NSString *_Nullable errorInfo))completion;
+- (void)bidLoss:(nullable NSDictionary *)winInfo;
+- (void)bidLoss:(nullable NSDictionary *)winInfo
+     completion:(nullable void (^)(BOOL success, NSString *_Nullable errorInfo))completion;
+- (void)biddingSuccessWithSecondInfo:(nullable NSDictionary *)secondInfo
+                          completion:(nullable void (^)(BOOL success, NSString *_Nullable errorInfo))completion;
+- (void)biddingFailWithWinInfo:(nullable NSDictionary *)winInfo
+                    completion:(nullable void (^)(BOOL success, NSString *_Nullable errorInfo))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

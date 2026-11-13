@@ -5,10 +5,14 @@
 
 #import "ALAdMasterNativeAd.h"
 #import <AdMasterSDK/AdMasterSDK.h>
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
 #import <AppLovinSDK/AppLovinSDK.h>
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ALAdMasterNativeAd ()
-@property (nonatomic, strong) ADMNativeAdObject *admNativeObject;
+@property (nonatomic, strong, readwrite) ADMNativeAdObject *admNativeObject;
 @property (nonatomic, strong, nullable) ADMNativeVideoView *admVideoView;
 @property (nonatomic, weak, nullable) UIViewController *presentingViewController;
 @end
@@ -28,7 +32,8 @@
     return self;
 }
 
-- (BOOL)prepareForInteractionClickableViews:(NSArray<UIView *> *)clickableViews withContainer:(UIView *)container {
+- (BOOL)prepareForInteractionClickableViews:(NSArray<UIView *> *)clickableViews
+                              withContainer:(UIView *)container {
     if (!self.admNativeObject) {
         return NO;
     }
@@ -45,3 +50,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

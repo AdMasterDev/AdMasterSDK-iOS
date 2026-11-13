@@ -9,7 +9,18 @@
 #define ADMCustomEvent_h
 
 #import <Foundation/Foundation.h>
+#if __has_include(<GoogleMobileAds/GoogleMobileAds.h>)
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#else
+@protocol GADMediationAdapter <NSObject>
+@end
+@interface GADMediationCredentials : NSObject
+@property (nonatomic, readonly, nonnull) NSDictionary<NSString *, id> *settings;
+@end
+@interface GADMediationAdConfiguration : NSObject
+@property (nonatomic, readonly, nonnull) GADMediationCredentials *credentials;
+@end
+#endif
 
 typedef NS_ENUM(NSInteger, ADMCustomEventErrorCode) {
     ADMCustomEventErrorInvalidConfiguration = 100,

@@ -49,6 +49,7 @@
     
     CGSize adSize = CGSizeMake(adConfiguration.adSize.size.width, adConfiguration.adSize.size.height);
     _bannerAd = [[ADMBannerView alloc] initWithAdSize:adSize adUnitTag:adUnitID];
+    _bannerAd.request = [ADMCustomEventUtils requestFromAdConfiguration:adConfiguration];
     _bannerAd.delegate = self;
     [_bannerAd loadAd];
 }
