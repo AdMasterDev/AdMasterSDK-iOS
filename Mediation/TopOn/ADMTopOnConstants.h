@@ -3,7 +3,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// TopOn AnyThink Adapter 版本号（四段式，前三位对齐 AdMasterSDK 版本）
-static NSString *const ADMTopOnAdapterVersion = @"2.1.0.0";
+static NSString *const ADMTopOnAdapterVersion = @"2.2.0.0";
 
 /// 广告网络名称
 static NSString *const ADMTopOnNetworkName = @"MediaGo";

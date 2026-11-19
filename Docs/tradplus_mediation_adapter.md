@@ -9,8 +9,8 @@ This guide explains how to integrate **AdMaster SDK** via **TradPlus Mediation (
 | Component | Requirement |
 | --- | --- |
 | **Minimum iOS Version** | iOS 12.0+ |
-| **AdMasterSDK** | `>= 2.1.0` |
-| **TradPlusMediationAdMaster** | `2.1.0.0` |
+| **AdMasterSDK** | `>= 2.2.0` |
+| **TradPlusMediationAdMaster** | `2.2.0.0` |
 | **TradPlusAdSDK** | TradPlus iOS SDK (`>= 15.7.0`) |
 
 ---
@@ -26,13 +26,13 @@ target 'YourAppTarget' do
   use_frameworks!
 
   # 1. AdMaster Core SDK
-  pod 'AdMasterSDK', '~> 2.1.0'
+  pod 'AdMasterSDK', '~> 2.2.0'
 
   # 2. TradPlus Core SDK
   pod 'TradPlusAdSDK', '>= 15.7.0'
 
   # 3. AdMaster TradPlus Custom Adapter
-  pod 'TradPlusMediationAdMaster', '~> 2.1.0.0'
+  pod 'TradPlusMediationAdMaster', '~> 2.2.0.0'
 end
 ```
 

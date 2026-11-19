@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString *const ADMTradPlusErrorDomain = @"cc.admaster.mediation.tradplus";
 
 /// Adapter version: <AdMaster SDK version>.<adapter patch version>
-static NSString *const ADMTradPlusAdapterVersion = @"2.1.0.0";
+static NSString *const ADMTradPlusAdapterVersion = @"2.2.0.0";
 
 /// Network name for TradPlus reporting
 static NSString *const ADMTradPlusNetworkName = @"MediaGo";
